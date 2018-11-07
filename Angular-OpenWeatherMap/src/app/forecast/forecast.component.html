@@ -1,0 +1,19 @@
+
+
+<form class="lookCity" [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
+  <input type="text" class="cityName" formControlName="forecastCity" placeholder="Name of city">
+  <button class="btn">go</button>
+</form>
+<!-- <h1>{{cityForecast[0].city}}</h1> -->
+<div class="container">
+  <div class="row">
+      <div class="forecast col" *ngFor="let day of cityForecast">
+          <div class="day">
+            <h2 class="date">{{day.date | date: 'MMMMd'}}</h2>
+            <img src="assets/icons/{{day.icon}}.png">
+            <!-- <h2 class="description">{{day.description}}</h2> -->
+            <h3 class="temp">{{day.temp}}&#8451;</h3>
+          </div>
+        </div>
+  </div>
+</div>

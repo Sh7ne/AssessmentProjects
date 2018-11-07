@@ -1,0 +1,16 @@
+<div class="container">
+  <h2 class="city">{{myWeather.cityName}}</h2>
+  <h1 class="temperature">{{myWeather.temp}} &#8451;</h1>
+  <h4 class="description">description</h4>
+  <div class="img">
+    <img class="weatherIcon" src="/assets/icons/{{myWeather.icon}}.png">
+  </div>
+  <h3>{{myWeather.weatherKind}}</h3>
+  <h4>Max: {{myWeather.tempMax}} &#8451;</h4>
+  <h4>Min: {{myWeather.tempMin}} &#8451;</h4>
+</div>
+
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <input type="text" class="cityName" ngModel #city="ngModel" name="city" placeholder="Where do you want to go">
+  <button class="btn" name="button">go</button>
+</form>
